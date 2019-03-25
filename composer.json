@@ -9,6 +9,7 @@
   "autoload": {
     "psr-4": {
       "Carno\\HRPC\\Accel\\": "src"
-    }
+    },
+    "files": [".init.php"]
   }
 }
