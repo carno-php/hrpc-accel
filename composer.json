@@ -4,6 +4,7 @@
   "require": {
     "carno-php/coroutine": "^1.0",
     "carno-php/promise": "^1.0",
+    "carno-php/cluster": "^1.0",
     "carno-php/socket": "^1.0",
     "carno-php/http": "^1.0"
   },
