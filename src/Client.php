@@ -90,7 +90,11 @@ class Client
 
         $message = yield race(
             $packet->message(),
-            timeout($this->options->ttWait, RequestTimeoutException::class, 'SEQ='.$seq)
+            timeout(
+                $this->options->ttWait,
+                RequestTimeoutException::class,
+                sprintf('SEQ=%d:WMS=%d:URI=%s', $seq, $this->options->ttWait, $request->getUri()->getPath())
+            )
         );
 
         return $this->s2response($message);
